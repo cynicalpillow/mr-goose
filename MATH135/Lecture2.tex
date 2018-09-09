@@ -1,0 +1,124 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\setlength\parindent{0pt} %No auto indents
+\title{Lecture 2 (1.2 - 1.4)}
+\author{Rui Li}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\section*{1.2 - Sets}
+\addcontentsline{toc}{section}{1.2 - Sets}
+    \textbf{Definition: }a set is a collection of objects, called it's elements.
+    \smallskip
+
+    \textit{Notation: }
+    
+    $a \in S$ (a is an element of S)
+    
+    $a \notin S$ (a is not an element of S)
+    \bigskip
+
+    \underline{\textbf{The Natural Numbers}}
+    
+    $\mathbb{N}$ = \{1, 2, 3..\}
+    
+    Thus $1 \in \mathbb{N}$, $2 \in \mathbb{N}$, etc. However $0 \notin \mathbb{N}$. (in MATH135)
+    \bigskip
+
+    \underline{\textbf{The Integers}}
+    
+    $\mathbb{Z}$ = \{..-2, -1, 0, 1, 2..\}
+    
+    Thus $0 \in \mathbb{Z}$, $\pm1 \in \mathbb{Z}$, $\frac{1}{2} \notin \mathbb{Z}$.
+    \bigskip
+
+    \underline{\textbf{The Rational Numbers}}
+
+    $\mathbb{Q}$ = \{$\frac{a}{b}$: a, b $\in \mathbb{Z}$, b$\neq 0$\}
+
+    Thus $1 = \frac{1}{1} \in \mathbb{Q}; \frac{1}{2} \in \mathbb{Q}; \sqrt{2} \notin \mathbb{Q}$ (Lecture 9).
+    \bigskip
+
+    \underline{\textbf{The Real Numbers}}
+
+    $\mathbb{R} \rightarrow \sqrt{2} \in \mathbb{R}; \sqrt{-1} \notin \mathbb{R}$ (Lecture 9).
+    \bigskip
+
+    \textit{Examples:}
+    
+    Odd natural numbers less than 10 is \{1, 3, 5, 7, 9\}.
+
+    The set S = \{1, 2, \{3\}\} has three elements $1 \in S, 2 \in S, \{3\} \in S$ but $3 \notin S$.
+
+    \{1, 2, 3\} = \{1, 3, 2\} = \{1, 2, 2, 3\}
+    \bigskip
+
+    \textbf{Order is not relevant with sets, neither is multiplicity (the second 2 above is redundant)}
+    \medskip
+
+    \underline{\textbf{The Empty Set}}
+
+    $\varnothing = \{\}$ No elements.
+    \medskip
+
+    \textit{Examples:}
+
+    Set of integers both even and odd is $\varnothing$.
+
+    The set of elements common to both \{3\}, \{\{3\}\} is $\varnothing$.
+
+    \{$\varnothing$\} has one element, $\varnothing$ ($\varnothing \in \{\varnothing\}, \varnothing \notin \varnothing$).
+
+    $\{\varnothing, \{\varnothing\}\}$ has 2 elements.
+
+\section*{1.3 - Statements and Negation}
+\addcontentsline{toc}{section}{1.3 - Statements and Negation}
+
+    \textbf{Definition: } A statement is a sentence that is either true or false.
+
+    \textit{Examples of statements: }
+    
+    $1+1=2\\1+1=3\\\sqrt{2} \notin \mathbb{Q}$
+    \medskip
+
+    \textit{Not statements:}
+
+    $x^2-x=0\\\frac{m-7}{2m+4}=5$
+    \bigskip
+
+    \underline{\textbf{Negation}}
+
+    \textbf{Definition: }Let p be a statement, the negation of p is denoted $\neg$P, and is the statement with the opposite truth value.
+
+    \begin{center}
+        \begin{tabular}{ |c|c|c| } 
+            \hline
+            P & $\neg P$ & $\neg(\neg P)$ \\ 
+            \hline
+            True & False & True \\ 
+            False & True & False \\ 
+            \hline
+        \end{tabular}
+    \end{center}
+    
+    Double negation has the same truth values as P, so P is logically equivalent to it's double negation.
+    
+    \begin{center}
+        \underline{$P\equiv\neg (\neg P)$}
+    \end{center}
+    \medskip
+
+    Negation of 1+1=2 is $\neg(1+1=2)$, or $1+1\neq2$.
+
+    Negation of $\sqrt{2} \in \mathbb{Q}$ is $\sqrt{2} \notin \mathbb{Q}$. $\neg(\sqrt{2} \notin \mathbb{Q})$ is $\sqrt{2} \in \mathbb{Q}$ so $\neg(\neg(\sqrt{2} \in \mathbb{Q}))$ is $\sqrt{2} \in \mathbb{Q}$.
+
+\section*{1.4 - Quantifiers}
+\addcontentsline{toc}{section}{1.4 - Quantifiers}
+
+
+
+\end{document}
