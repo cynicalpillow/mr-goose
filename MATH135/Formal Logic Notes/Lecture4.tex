@@ -1,0 +1,147 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\setlength\parindent{0pt}
+\title{Lecture 4 (2.4 - 2.6)}
+\author{Rui Li}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\bigskip
+
+Example: 
+
+Show that:
+
+\begin{align*}
+    \neg(P \wedge (\neg Q \wedge R)) \equiv \neg(P \wedge Q) \vee R
+\end{align*}
+
+Solution:
+
+\begin{align*}
+    \neg(P \wedge (\neg Q \wedge R)) &\equiv \neg P \vee \neg(\neg Q \wedge R)\ (By\ DML)\\
+    &\equiv \neg P \vee \neg \neg Q \vee \neg R\\
+    &\equiv \neg P \vee (Q \vee \neg R)\\
+    &\equiv \neg P \vee (\neg R \vee Q)\ (By\ Commutative\ Law)\\
+    &\equiv (\neg P \vee \neg R) \vee Q)\ (By\ Associative\ Law)\\
+    &\equiv \neg(P \wedge R) \vee Q\ (By\ DML)
+\end{align*}
+
+\section*{2.4.1 Implication}
+\addcontentsline{toc}{section}{2.4.1 Implication}
+
+\textbf{Definition: }
+\begin{align*}
+    &P \rightarrow Q\\
+    (P\ &implies\ Q)\\
+    (If&\ P\ then\ Q)
+\end{align*}
+
+\begin{center}
+    \begin{tabular}{ |c|c|c| } 
+        \hline
+        P & Q & $P \rightarrow Q$ \\ 
+        \hline
+        True & True & True \\ 
+        True & False & False \\
+        False & True & True \\
+        False & False & True \\ 
+        \hline
+    \end{tabular}
+\end{center}
+
+$P \rightarrow Q$ is called a conditional statement, where P is the hypothesis and Q is the conclusion.
+
+\bigskip
+
+Examples: 
+
+\medskip
+
+P = "You Study", Q = "You pass", $P \rightarrow Q = $ "If you study then you pass"
+
+\medskip
+
+For all real x, if $x > 2$ then $x^2 > 4$
+
+For all real x, if $x \geq 2$ then $x^2 > 4$
+
+\bigskip
+
+\textbf{Negating Implications}
+
+\begin{center}
+    \begin{tabular}{ |c|c|c|c| } 
+        \hline
+        P & Q & $P \rightarrow Q$ & $\neg P \vee Q$ \\ 
+        \hline
+        True & True & True & True\\ 
+        True & False & False & False\\
+        False & True & True & True\\
+        False & False & True & True\\ 
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{align*}
+    P \rightarrow Q \equiv \neg P \vee Q
+\end{align*}
+
+Thus, 
+\begin{align*}
+    \neg(P \rightarrow Q) &\equiv \neg(\neg P \vee Q)\\
+    &\equiv \neg \neg P \wedge \neg Q\\
+    &\equiv P \wedge \neg Q
+\end{align*}
+
+\section*{2.5 Converse and Contrapositive}
+\addcontentsline{toc}{section}{2.5 Converse and Contrapositive}
+
+\textbf{Definition: }
+
+\textbf{Converse of $P \rightarrow Q$ is $Q \rightarrow P$}
+
+\textbf{Contrapositive of $P \rightarrow Q$ is $(\neg Q) \rightarrow (\neg P)$}
+
+However, $P \rightarrow Q \neq Q \rightarrow P$
+
+Additionally $\neg Q \rightarrow \neg P \equiv P \rightarrow Q$
+
+\medskip
+Example:
+
+"If $a < b$ then $a \leq b$"
+
+Converse: "If $a \leq b$ then $a < b$"
+
+Contrapositive: "If $a > b$ then $a \geq b$"
+
+\section*{2.6 If and Only If}
+\addcontentsline{toc}{section}{2.6 If and Only If}
+
+\textbf{Definition: }
+
+$P \leftrightarrow Q$ (P if and only if Q)
+
+\medskip
+
+\begin{center}
+    \begin{tabular}{ |c|c|c| } 
+        \hline
+        P & Q & $P \leftrightarrow Q$ \\ 
+        \hline
+        True & True & True \\ 
+        True & False & False \\
+        False & True & False \\
+        False & False & False \\ 
+        \hline
+    \end{tabular}
+\end{center}
+
+\end{document}

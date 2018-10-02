@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\setlength\parindent{0pt}
+\title{Lecture 6 (3.2 - 3.3)}
+\author{Rui Li}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section*{3.2 Proving existentially quantified statements}
+\addcontentsline{toc}{section}{3.2 Proving existentially quantified statements}
+
+$\exists x \in S, P(x)$
+
+Prove that there exists $m \in \mathbb{Z}$ such that,
+
+\begin{align*}
+    \frac{m-7}{2m+4} = 5
+\end{align*}
+
+Let $m = -3$ then $m \in \mathbb{Z}$, and,
+
+\begin{align*}
+    \frac{m-7}{2m+4} &= \frac{-3-7}{2(-3)+4}\\
+    &= \frac{-10}{-2}\\
+    &= 5
+\end{align*}
+
+Essentially, for proving existentially quantified statements, give one example.
+
+\bigskip
+
+\textbf{Disproving existentially quantified statements}
+
+\medskip
+
+For disproving existentially quantified statements, prove the universally quantified statement, $\forall x \in S, \neg P(x)$.
+
+\medskip
+
+Disprove: There exists $x \in \mathbb{R}$ such that $cos(2x) + sin(2x) = 3$.
+
+\underline{Proof:} Let $x \in \mathbb{R}$ then,
+
+\begin{align*}
+    -1 \leq cos(2x) \leq 1\ and\ -1 \leq sin(2x) \leq 1
+\end{align*}
+
+Hence,
+
+\begin{align*}
+    cos(2x) + sin(2x) \leq 1+1 = 2 < 3
+\end{align*}
+
+There exists no x such that the statement could be true.
+
+\section*{3.3 Proving implications}
+\addcontentsline{toc}{section}{3.3 Proving implications}
+
+Assume hypothesis is true, and try and get to conclusion.
+
+\textbf{DO NOT ASSUME CONCLUSION}
+
+\medskip
+
+Example:
+
+
+
+\end{document}

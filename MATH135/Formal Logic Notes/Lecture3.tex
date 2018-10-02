@@ -1,0 +1,199 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\setlength\parindent{0pt}
+\title{Lecture 3 (1.4 - 2.3)}
+\author{Rui Li}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+\section*{1.4.3 Negation of Quantified statements}
+\addcontentsline{toc}{section}{1.4.3 Negation of Quantified statements}
+Consider: "Everyone in this room is right handed"
+
+Which in symbols is, 
+\begin{align*}
+    \forall x \in S, P(x)
+\end{align*}
+
+\bigskip
+
+\textbf{S = set of people in room}
+
+\textbf{P(x) is "x is right-handed"}
+
+The negation is "Someone in the room is not right-handed",
+\begin{align*}
+    \exists x \in S, \neg P(x)
+\end{align*}
+
+Thus, 
+\begin{align*}
+    \neg(\forall x \in S, P(x)) = \exists x \in S, \neg P(x)
+\end{align*}
+
+Also since, 
+\begin{align*}
+    \neg(\neg P) &= P\\
+    \neg(\exists x \in S), P(x)) &= \forall x \in S, \neg P(x)
+\end{align*}
+\medskip
+
+Negation of $x^2 - x >= 0$ for all real numbers x (false) is, 
+\begin{align*}
+    x^2 -x < 0\ for\ some\ real\ numbers\ x\ (true)\\
+    \neg(\forall x \in \mathbb{R}, x^2-x \geq 0)\equiv(\exists x \in \mathbb{R}, x^2 - x < 0)
+\end{align*}
+
+\section*{1.5 Nested Quantifiers}
+\addcontentsline{toc}{section}{1.5 Nested Quantifiers}
+Examples:
+
+a) $\exists m \in \mathbb{Z}, \exists n \in \mathbb{Z}, m+n\ is\ even\ (True)$
+
+b) $\forall m \in \mathbb{Z}, \forall n \in \mathbb{Z}, m+n\ is\ odd\ (False)$
+
+c) $\exists m \in \mathbb{Z}, \forall n \in \mathbb{Z}, m+n\ is\ odd\ (False)$
+
+d) $\forall m \in \mathbb{Z}, \exists n \in \mathbb{Z}, m+n\ is\ even\ (True)$
+
+e) $\exists m \in \mathbb{Z}, \forall n \in \mathbb{Z}, m+n\ is\ even\ (False)$
+
+f) $\forall m \in \mathbb{Z}, \exists n \in \mathbb{Z}, m+n\ is\ odd\ (True)$
+
+Variables to the right depend on variables to the left.
+
+From above, A and B are negations of each other,
+
+\begin{align*}
+    \neg(\exists m \in \mathbb{Z}, \exists n \in \mathbb{Z}, m+n\ is\ even) \equiv \forall m \in \mathbb{Z}, \forall n \in \mathbb{Z}, m+n\ is\ odd\ (not\ even)
+\end{align*}
+
+C and D and E and F are negations as well
+
+In general \textbf{flip quantifiers, and negate the open sentence P(x).}
+
+The order of quantifiers matters in statements with mixed quantifiers.
+
+\section*{2.2 Conjunctions and Disjunctions}
+\addcontentsline{toc}{section}{2.2 Conjunctions and Disjunctions}
+
+\textbf{Definition: }Conjunction (P AND Q) "$P \wedge Q$" is defined as,
+
+\begin{center}
+    \begin{tabular}{ |c|c|c| } 
+        \hline
+        P & Q & $P \wedge Q$ \\ 
+        \hline
+        True & True & True \\ 
+        True & False & False \\
+        False & True & False \\
+        False & False & False \\ 
+        \hline
+    \end{tabular}
+\end{center}
+
+Example:
+
+\begin{align*}
+    (1+1 = 3)\wedge(\pi + 2 < 6)
+\end{align*}
+
+is false because $1+1=3$ is false. However, 
+
+\begin{align*}
+    (1+1 = 2)\wedge(\pi + 2 < 6)
+\end{align*}
+
+is true.
+\bigskip
+
+\textbf{Definition: } Disjunction (P or Q) "$P \vee Q$" is defined as,
+
+\begin{center}
+    \begin{tabular}{ |c|c|c| } 
+        \hline
+        P & Q & $P \vee Q$ \\ 
+        \hline
+        True & True & True \\ 
+        True & False & True \\
+        False & True & True \\
+        False & False & False \\ 
+        \hline
+    \end{tabular}
+\end{center}
+
+$\neg P$, $P \wedge Q$, $P \vee Q$, are examples of compound statements, ie. statements that are composed of one or more \underline{component statements} (P, Q, ...) via logical operators. ($\neg,\ \wedge, \vee,\ ...$)
+
+\begin{center}
+    \begin{tabular}{ |c|c|c|c|c|c|c| } 
+        \hline
+        P & Q & $(P \wedge Q)$ & $\neg(P \wedge Q)$ & $\neg P$ & $\neg Q$ & $(\neg P)\vee(\neg Q)$\\ 
+        \hline
+        True & True & True & False & False & False & False \\ 
+        True & False & False & True & False & True & True \\ 
+        False & True & False & True & True & False & True \\ 
+        True & True & False & True & True & True & True \\ 
+        \hline
+    \end{tabular}
+\end{center}
+
+As $\neg(P \wedge Q)$ always has the same truth values as $(\neg P) \vee (\neg Q)$, they are logically equivalent.
+
+\begin{align*}
+    \neg(P \wedge Q) \equiv (\neg P) \vee (\neg Q)
+\end{align*}
+
+\section*{2.3 Logical Operators and Algebra}
+\addcontentsline{toc}{section}{2.3 Logical Operators and Algebra}
+
+\textbf{De Morgan's Laws (DML)}
+
+1. $\neg(P \wedge Q) \equiv (\neg P) \vee (\neg Q)$
+
+2. $\neg(P \vee Q) \equiv (\neg P) \wedge (\neg Q)$
+
+\medskip
+
+Example: The negation of
+
+\textbf{Both $e + \pi$ and $e\pi$ are rational}
+
+is
+
+\textbf{Either $e + \pi$ is irrational or $e\pi$ is irrational}
+
+\medskip
+
+Practice:
+
+Let P, Q, R be statements
+
+\begin{align*}
+    P \wedge (Q \vee R) \equiv (P \wedge Q) \vee (P \wedge R)-
+\end{align*}
+
+\begin{center}
+    \begin{tabular}{ |c|c|c|c|c|c|c|c| } 
+        \hline
+        P & Q & R & $Q \wedge R$ & $P \wedge (Q \wedge R)$ & $P \wedge Q$ & $P \wedge R$ & $(P \wedge Q) \vee (P \wedge R)$\\ 
+        \hline
+        True & True & True & True & True & True & True & True \\ 
+        True & True & False & True & True & True & False & True\\ 
+        True & False & True & True & True & False & True & True\\ 
+        False & True & True & True & False & False & False & False\\
+        False & False & True & True & False & False & False & False\\ 
+        False & True & False & True & False & False & False & False\\ 
+        True & False& False & False & False & False & False & False\\ 
+        False & False & False & False & False & False & False & False\\  
+        \hline
+    \end{tabular}
+\end{center}
+
+The truth table shows that, for every possible assignment of truth values P, Q, R, statement 1 has the same truth value as statement 2. Hence the two statements are logically equivalent.
+
+\end{document}
